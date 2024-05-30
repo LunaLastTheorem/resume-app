@@ -1,0 +1,10 @@
+img#profile{
+    width: 300px;
+    border-radius: 50%;
+    transition: 1.5s ease-in-out;
+    margin: 15px;
+}
+
+img#profile:hover{
+    transform: translateY(-6px);
+}

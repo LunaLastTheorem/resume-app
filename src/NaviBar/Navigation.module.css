@@ -1,0 +1,17 @@
+a{
+    color: black;
+    transition: color 0.5s ease;
+    text-decoration: none;
+    padding: 5px;
+}
+
+nav a:hover{
+    color: grey;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    /* font-size: 40px; */
+}

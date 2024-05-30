@@ -1,0 +1,17 @@
+.foots {
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1{
+    margin: 0.5rem;
+}
+
+hr {
+    width: 25%;
+    color: black;
+    margin-bottom: 0.5em;
+}

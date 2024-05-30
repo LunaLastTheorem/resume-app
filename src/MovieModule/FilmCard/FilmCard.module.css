@@ -1,0 +1,46 @@
+.filmCard {
+    border-radius: 10px;
+    border: 2px solid white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-width: auto;
+    padding: 10px;
+    margin-top : 15px;
+    margin-left : 15px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.filmCard > *{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 5px;
+}
+
+.filmCard:hover {
+    transform: translate(-10px, -10px); 
+    animation: gamershadow 2s infinite;
+}
+
+@keyframes gamershadow {
+    0% {
+        box-shadow: rgba(255, 0, 0, 0.4) 5px 5px, rgba(255, 0, 0, 0.3) 10px 10px, rgba(255, 0, 0, 0.2) 15px 15px, rgba(255, 0, 0, 0.1) 20px 20px, rgba(255, 0, 0, 0.05) 25px 25px;
+    }
+    16.67% {
+        box-shadow: rgba(255, 127, 0, 0.4) 5px 5px, rgba(255, 127, 0, 0.3) 10px 10px, rgba(255, 127, 0, 0.2) 15px 15px, rgba(255, 127, 0, 0.1) 20px 20px, rgba(255, 127, 0, 0.05) 25px 25px;
+    }
+    33.34% {
+        box-shadow: rgba(255, 255, 0, 0.4) 5px 5px, rgba(255, 255, 0, 0.3) 10px 10px, rgba(255, 255, 0, 0.2) 15px 15px, rgba(255, 255, 0, 0.1) 20px 20px, rgba(255, 255, 0, 0.05) 25px 25px;
+    }
+    50% {
+        box-shadow: rgba(0, 255, 0, 0.4) 5px 5px, rgba(0, 255, 0, 0.3) 10px 10px, rgba(0, 255, 0, 0.2) 15px 15px, rgba(0, 255, 0, 0.1) 20px 20px, rgba(0, 255, 0, 0.05) 25px 25px;
+    }
+    66.67% {
+        box-shadow: rgba(0, 0, 255, 0.4) 5px 5px, rgba(0, 0, 255, 0.3) 10px 10px, rgba(0, 0, 255, 0.2) 15px 15px, rgba(0, 0, 255, 0.1) 20px 20px, rgba(0, 0, 255, 0.05) 25px 25px;
+    }
+    83.34% {
+        box-shadow: rgba(75, 0, 130, 0.4) 5px 5px, rgba(75, 0, 130, 0.3) 10px 10px, rgba(75, 0, 130, 0.2) 15px 15px, rgba(75, 0, 130, 0.1) 20px 20px, rgba(75, 0, 130, 0.05) 25px 25px;
+    }
+    100% {
+        box-shadow: rgba(148, 0, 211, 0.4) 5px 5px, rgba(148, 0, 211, 0.3) 10px 10px, rgba(148, 0, 211, 0.2) 15px 15px, rgba(148, 0, 211, 0.1) 20px 20px, rgba(148, 0, 211, 0.05) 25px 25px;
+    }
+}
