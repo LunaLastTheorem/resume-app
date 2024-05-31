@@ -13,11 +13,6 @@ a{
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
-    width: auto;
     font-size: 40px;
-    writing-mode: vertical-rl;
-    text-orientation: sideways;
-    height: 100vh;
-    position: sticky;
     top: 0;
 }

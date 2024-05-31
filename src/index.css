@@ -18,6 +18,18 @@ html, body {
 
 .navigation{
     font-size : var(--font-size-base);
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+}
+
+.phoneNavi{
+    display: none;
+}
+
+#scrollingbar{
+    position: sticky;
+    top: 0;
+    height: 100vh;
 }
 
 .nonfooter{
@@ -48,7 +60,7 @@ div[id^="basicinfo-"]{
     border-bottom: 1px solid red;
 }
 
-.footer, .navigation{
+.footer, .navigation, .phoneNavi{
     background-color: var(--primary-color);
 }
 
@@ -70,4 +82,26 @@ div[id^="basicinfo-"]{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+@media screen and (max-width:600px){
+    .sidebar{
+        display: none;
+    }
+
+    .nonfooter{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navigation{
+        display: none;
+    }
+
+    .phoneNavi{
+        position: sticky;
+        top: 0;
+        display: flex;
+        max-height: fit-content;
+    }
 }

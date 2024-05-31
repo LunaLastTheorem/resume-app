@@ -8,9 +8,15 @@ function App() {
     <>
     <div id="root">
       <div className="nonfooter">
-        <div className="navigation">
-          <Navigation />
 
+        <div className="phoneNavi">
+            <Navigation />
+        </div>
+        
+        <div className="navigation">
+          <div id="scrollingbar">
+            <Navigation />
+          </div>
         </div>
 
         <div className="main">
