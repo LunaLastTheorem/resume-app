@@ -1,12 +1,12 @@
-import './Navigation.module.css'
+import styles from './Navigation.module.css'
 
 function Navigation(){
     return (
         <>  
-            <nav>
+            <div className={styles.navigate}>
                 <a href='#'>About</a>
                 <a href='#'>See Work</a>
-            </nav>
+            </div>
         </>
     )
 }

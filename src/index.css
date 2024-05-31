@@ -1,69 +1,73 @@
-:root {
+:root{
     --background-color: rgb(155, 184, 205);
     --primary-color: rgb(255, 247, 212);
     --secondary-color: rgb(238, 199, 89);
     --third-color: rgb(177, 195, 129);
     --text-color: black;
-    --nav-bar-width : 3.5%;
     --font-size-base: 2.5vw;
 }
 
 html, body {
-    height: 100%;
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
+
+.navigation{
+    font-size : var(--font-size-base);
+}
+
+.nonfooter{
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    height: 90%;
+}
+
+.sidebar{
+    background-color: var(--secondary-color);
+    width: fit-content;
     min-height: 100vh;
 }
 
-#root {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+.sidebar #profile{
+    border-radius: 50%;
+    width: 35vh;
+    margin: 2vh;
+    transition: 1s ease-in-out;
 }
 
-.app {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+img#profile:hover{
+    transform: translateY(-5px);
 }
 
-.main {
-    flex-grow: 1;
-    display: flex;
-    margin-right: 0;
-    /* width: calc(100% - var(--nav-bar-width) + 10px); */
+div[id^="basicinfo-"]{
+    border-bottom: 1px solid red;
 }
 
-.content{
-    margin: 1.5rem;
-}
-
-.navigation, .foots {
+.footer, .navigation{
     background-color: var(--primary-color);
 }
 
-.basic-info {
-    background-color: var(--secondary-color);
-    left: 0;
+.footer{
+    height: auto;
+    /* ensures the root is at the botom*/
+    margin-top: auto; 
 }
 
-.navigation {
-    position: fixed;
-    right: 0;
-    top: 0;
+#root{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    /* makes it so it can take the whole webpage and be scrollable, no more white overflow */
+    min-height: 100vh;
+}
 
-    height: 100%;
-    width: var(--nav-bar-width);
-    padding: 0 5px;
-
-    writing-mode: vertical-rl;
-    text-orientation: sideways;
-    font-size : var(--font-size-base);
+#movies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }

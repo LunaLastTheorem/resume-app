@@ -5,13 +5,19 @@ a{
     padding: 5px;
 }
 
-nav a:hover{
-    color: grey;
+.navigate a:hover{
+    color: rgb(134, 134, 134);
 }
 
-nav{
+.navigate {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: row;
-    /* font-size: 40px; */
+    width: auto;
+    font-size: 40px;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    height: 100vh;
+    position: sticky;
+    top: 0;
 }
