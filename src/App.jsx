@@ -25,27 +25,44 @@ function App() {
         </div>
 
         <div className="sidebar">
-          <img src= {pfp} id="profile"/>
+          <img src= {pfp} id="profile" alt="profile picture"/>
 
-          <div id="basicinfo-contact">
-            <p>This is my contact info</p>
-          </div>
+          <div className="basicinfo">
+            <div id="basicinfo-contact">
+              <h1>contact info</h1>
+              <ul>
+                <li>Lorem</li>
+              </ul>
+            </div>
 
-          <div id="basicinfo-summary">
-            <p> this is my profile</p>
-          </div>
+            <div id="basicinfo-summary">
+              <h1>profile</h1>
+              <ul>
+                <li>Lorem</li>
+              </ul>
+            </div>
 
-          <div id="basicinfo-skills">
-            <p>these are my skills</p>
+            <div id="basicinfo-skills">
+              <h1>skills</h1>
+              <ul>
+                <li>Lorem</li>
+              </ul>
+            </div>
 
-          </div>
+            <div id="basicinfo-languages">
+              <h1>languages</h1>
+              <ul>
+                <li>Lorem</li>
+              </ul>
+            </div>
 
-          <div id="basicinfo-languages">
-            <p>These are my languages</p>
-          </div>
+            <div id="basicinfo-programming">
+              <h1>programming languages</h1>
+              <ul>
+                <li>Lorem</li>
+              </ul>
+            </div>
 
-          <div id="basicinfo-programming">
-            <p>programming languages</p>
           </div>
 
         </div>

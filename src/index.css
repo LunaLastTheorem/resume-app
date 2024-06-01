@@ -43,9 +43,11 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     width: fit-content;
     min-height: 100vh;
     background-color: var(--secondary-color);
+    max-width: fit-content;
 }
 
 .sidebar #profile{
@@ -55,14 +57,35 @@ html, body {
     transition: 1s ease-in-out;
 }
 
+.main{
+    width: 100%;
+}
+
+.basicinfo{
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    border: 1px solid var(--third-color);
+    border-radius: 10px;
+}
+
+.basicinfo div h1{
+    font-size: large;
+    border-bottom: 3px dotted var(--third-color);
+}
+
 img#profile:hover{
     transform: translateY(-5px);
 }
 
 div[id^="basicinfo-"]{
-    border-bottom: 1px solid var(--third-color);
-    width: fit-content;
-    padding: 0 15px 0 15px;
+    width: 100%;
+    margin: 5px 0;
 }
 
 .footer, .navigation, .phoneNavi{
@@ -98,6 +121,7 @@ div[id^="basicinfo-"]{
     .main{
         margin-top: 50px;
     }
+
     .nonfooter{
         display: flex;
         flex-direction: column-reverse;
@@ -106,8 +130,9 @@ div[id^="basicinfo-"]{
     .sidebar{
         background-color: var(--secondary-color);
         width: auto;
-        text-align: center;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+        min-height: fit-content;
+        max-width: 100%;
     }
 
     .navigation{
