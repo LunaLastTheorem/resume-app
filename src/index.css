@@ -76,22 +76,28 @@ div[id^="basicinfo-"]{
     background-color: var(--background-color);
     /* makes it so it can take the whole webpage and be scrollable, no more white overflow */
     min-height: 100vh;
+    width: 100%; /* Ensure full width */
 }
 
 #movies{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+
 }
 
-@media screen and (max-width:600px){
-    .sidebar{
-        display: none;
-    }
+@media screen and (max-width:800px){
 
     .nonfooter{
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+
+    .sidebar{
+        background-color: var(--secondary-color);
+        width: auto;
+        text-align: center;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
     }
 
     .navigation{
@@ -103,5 +109,6 @@ div[id^="basicinfo-"]{
         top: 0;
         display: flex;
         max-height: fit-content;
+        background-color: var(--primary-color);
     }
 }

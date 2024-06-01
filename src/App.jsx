@@ -8,10 +8,6 @@ function App() {
     <>
     <div id="root">
       <div className="nonfooter">
-
-        <div className="phoneNavi">
-            <Navigation />
-        </div>
         
         <div className="navigation">
           <div id="scrollingbar">
@@ -52,6 +48,10 @@ function App() {
             <p>these are my proframming languages</p>
           </div>
 
+        </div>
+
+        <div className="phoneNavi">
+            <Navigation />
         </div>
 
       </div>
