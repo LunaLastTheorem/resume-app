@@ -15,6 +15,10 @@ function Movies(){
                 <h2>The Tunnel</h2>
                 <p>This is what I did for it</p>
             </FilmCard>
+            <FilmCard>
+                <h2>The Tunnel</h2>
+                <p>This is what I did for it</p>
+            </FilmCard>
         </>
     )
 }

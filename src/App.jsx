@@ -25,6 +25,11 @@ function App() {
         </div>
 
         <div className="sidebar">
+
+          <div className="nightswitch">
+            <button>click me</button>
+          </div>
+
           <img src= {pfp} id="profile" alt="profile picture"/>
 
           <div className="basicinfo">
