@@ -1,10 +1,39 @@
 :root{
-    --background-color: rgb(155, 184, 205);
-    --primary-color: rgb(255, 248, 231);
-    --secondary-color: rgb(238, 199, 89);
-    --third-color: rgb(177, 195, 129);
-    --text-color: black;
-    --font-size-base: 2.5vw;
+    --background-color-light: rgb(155, 184, 205);
+    --primary-color-light: rgb(255, 248, 231);
+    --secondary-color-light: rgb(238, 199, 89);
+    --third-color-light: rgb(177, 195, 129);
+    --text-color-light: black;
+    --light-gradient: linear-gradient(
+        to right,
+        var(--background-color-light),
+        var(--secondary-color-light),
+        var(--background-color-dark),
+        var(--secondary-color-dark)
+        );
+
+    --background-color-dark: #222831;
+    --primary-color-dark: #393E46;
+    --secondary-color-dark: #00767c;
+    --third-color-dark: #EEEEEE;
+    --text-color-dark: white;
+    --dark-gradient: linear-gradient(
+        to right,
+        var(--background-color-dark),
+        var(--secondary-color-dark),
+        var(--background-color-light),
+        var(--secondary-color-light)
+        );
+
+    /* Default theme */
+    --background-color: var(--background-color-dark);
+    --primary-color: var(--primary-color-dark);
+    --secondary-color: var(--secondary-color-dark);
+    --third-color: var(--third-color-dark);
+    --text-color: var(--text-color-dark);
+    --default-gradient: var(--light-gradient);
+
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 html, body {
@@ -13,11 +42,68 @@ html, body {
     height: 100%;
     width: 100%;
     font-family: 'Courier New', Courier, monospace;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
+html, body, a{
+    color: var(--text-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.sidebar{
+    background-color: var(--secondary-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.footer, .navigation, .phoneNavi, .basicinfo{
+    background-color: var(--primary-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.basicinfo div h1{
+    font-size: large;
+    border-bottom: 3px dotted var(--third-color);
+}
+
+#root{
+    background-color: var(--background-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+button {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    margin: 20px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;;
+    transition: all .4s ease-in-out;
+    background-image: var(--default-gradient);
+}
+
+button:hover{
+    background-position: 100% 0;
+    transition: all .4s ease-in-out;
+}
+
+button img{
+    transition: all .5s ease;
+}
+
+button img:hover{
+    transform: rotate(-180deg);
+}
+
+button:focus{
+    outline: none;
+}
 
 .navigation{
-    font-size : var(--font-size-base);
     writing-mode: vertical-rl;
     text-orientation: sideways;
 }
@@ -46,8 +132,13 @@ html, body {
     justify-content: space-evenly;
     width: fit-content;
     min-height: 100vh;
-    background-color: var(--secondary-color);
     max-width: fit-content;
+}
+
+.nightswitch{
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
 }
 
 .sidebar #profile{
@@ -59,7 +150,7 @@ html, body {
 
 .main{
     width: 100%;
-    margin-top: 50px;
+    margin: 50px 0;
 }
 
 .basicinfo{
@@ -70,14 +161,8 @@ html, body {
     flex-wrap: wrap;
     margin: 10px;
     padding: 10px;
-    background-color: var(--primary-color);
-    border: 1px solid var(--third-color);
     border-radius: 10px;
-}
-
-.basicinfo div h1{
-    font-size: large;
-    border-bottom: 3px dotted var(--third-color);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
 img#profile:hover{
@@ -89,10 +174,6 @@ div[id^="basicinfo-"]{
     margin: 5px 0;
 }
 
-.footer, .navigation, .phoneNavi{
-    background-color: var(--primary-color);
-}
-
 .footer{
     height: auto;
     /* ensures the root is at the botom*/
@@ -102,7 +183,6 @@ div[id^="basicinfo-"]{
 #root{
     display: flex;
     flex-direction: column;
-    background-color: var(--background-color);
     /* makes it so it can take the whole webpage and be scrollable, no more white overflow */
     min-height: 100vh;
     width: 100%; /* Ensure full width */
@@ -126,7 +206,6 @@ div[id^="basicinfo-"]{
     }
 
     .sidebar{
-        background-color: var(--secondary-color);
         width: auto;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
         min-height: 95vh;
