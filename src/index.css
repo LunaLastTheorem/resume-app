@@ -2,7 +2,7 @@
     --background-color-light: rgb(155, 184, 205);
     --primary-color-light: rgb(255, 248, 231);
     --secondary-color-light: rgb(238, 199, 89);
-    --third-color-light: rgb(177, 195, 129);
+    --third-color-light: rgb(150, 165, 109);
     --text-color-light: black;
     --light-gradient: linear-gradient(
         to right,
@@ -105,6 +105,37 @@ button:focus{
     outline: none;
 }
 
+h2 span{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.content h2{
+    text-align: left;
+}
+
+.content h1{
+    border-bottom: 3px dotted var(--third-color);
+    padding-left: 20px;
+}
+
+.content{
+    padding: 0 50px;
+}
+
+.main{
+    margin: 50px 0; 
+}
+
+.name{
+    padding: 50px;
+}
+
+.name h1{
+    text-align: center;
+    border-bottom: 3px dotted var(--third-color);
+}
+
 .navigation{
     writing-mode: vertical-rl;
     text-orientation: sideways;
@@ -131,7 +162,7 @@ button:focus{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    gap: 20px;
     width: fit-content;
     min-height: 100vh;
     max-width: fit-content;
@@ -150,10 +181,6 @@ button:focus{
     transition: 1s ease-in-out;
 }
 
-.main{
-    width: 100%;
-    margin: 50px 0;
-}
 
 .basicinfo{
     display: flex;

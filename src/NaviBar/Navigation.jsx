@@ -5,7 +5,7 @@ function Navigation(){
         <>  
             <div className={styles.navigate}>
                 <a href='#profile'>About</a>
-                <a href='#movies'>See Work</a>
+                <a href='#projects'>See Work</a>
             </div>
         </>
     )

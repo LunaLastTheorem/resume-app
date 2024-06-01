@@ -14,7 +14,7 @@
 
 .filmCard > *{
     font-family: 'Courier New', Courier, monospace;
-    margin: 5px;
+    margin: 10px;
 }
 
 .filmCard:hover {
