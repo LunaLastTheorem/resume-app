@@ -45,7 +45,7 @@ function App() {
           </div>
 
           <div id="basicinfo-programming">
-            <p>these are my proframming languages</p>
+            <p>programming languages</p>
           </div>
 
         </div>

@@ -4,8 +4,8 @@ function Navigation(){
     return (
         <>  
             <div className={styles.navigate}>
-                <a href='#'>About</a>
-                <a href='#'>See Work</a>
+                <a href='#profile'>About</a>
+                <a href='#movies'>See Work</a>
             </div>
         </>
     )
